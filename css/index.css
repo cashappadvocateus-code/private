@@ -1,0 +1,1177 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins";
+}
+body {
+  scroll-behavior: smooth;
+}
+.view-flex {
+  display: flex;
+}
+.cash-app-green {
+  /* background-color: #56bb37; */
+  background-color: #0cba00;
+  color: rgb(0, 0, 0) !important;
+  border: none !important;
+}
+.home-balance {
+  padding: 0;
+  font-size: 18px !important;
+  font-family: "poppins" !important;
+  font-weight: 600 !important;
+  margin-bottom: 5px;
+}
+.bg-white {
+  background-color: white;
+  color: rgb(206, 206, 206);
+}
+.default-bg {
+  background-color: rgb(240, 240, 240);
+}
+.view-item {
+  display: block;
+}
+.hide-item {
+  display: none;
+}
+.d-green {
+  background-color: #03b600;
+}
+.d-blue {
+  background-color: rgb(0, 208, 255);
+}
+.d-stock {
+  background-color: rgb(122, 7, 171);
+}
+.d-tax {
+  background-color: rgb(42, 1, 113);
+}
+#go-to-prompt-container {
+  border: none;
+  font-size: 50px;
+  background-color: transparent;
+  color: black;
+  vertical-align: middle;
+  margin-right: 40px;
+}
+.container {
+  position: relative;
+  padding: 65px 20px 40px 20px;
+  color: rgb(39, 38, 38);
+}
+
+.nav {
+  position: fixed;
+  background-color: inherit;
+  right: 0;
+  left: 0;
+  display: flex;
+  top: 0;
+  padding: 10px 20px 14px 20px;
+  justify-content: space-between;
+  z-index: 4;
+}
+.left-nav {
+  font-weight: 600;
+  font-size: 25px;
+}
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-profile-picture span {
+  color: black;
+  background-color: rgb(235, 235, 255);
+  padding: 5px;
+  border-radius: 50%;
+}
+.add-profile-picture {
+  font-size: 18px;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.profile-picture img {
+  height: 100%;
+  border-radius: 50%;
+  width: 100%;
+}
+.bottom-nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  color: white;
+  bottom: 0;
+  padding: 20px 20px 30px 20px;
+  border-top: 1px solid rgb(235, 235, 235);
+  align-items: center;
+  justify-content: center;
+}
+.cash-balance {
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 0px;
+}
+.balance-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.balance {
+  padding: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+.routing {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  display: flex;
+  gap: 10px;
+  padding: 2px 0px;
+}
+.balance-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  padding-top: 15px;
+}
+.balance-buttons button {
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  color: black;
+  padding: 10px 35px;
+}
+.paycheck {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  margin: 10px 0px 33px 0px;
+  align-items: center;
+  padding: 12px 20px;
+  justify-content: space-between;
+}
+.paycheck > div {
+  display: flex;
+  align-items: center;
+}
+.paycheck-icon,
+.explore-icon {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.paycheck-texts p {
+  font-weight: 600;
+  font-size: 17px;
+}
+.paycheck-texts span {
+  font-size: 13px;
+  font-weight: 600;
+  color: gray;
+}
+.explore-header,
+.more-ways-header {
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 5px;
+  margin: 0;
+}
+.explore-card {
+  background-color: white;
+  width: 38.5%;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+}
+.explore-container {
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.explore-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.explore-card-header p {
+  font-weight: 600;
+  font-size: 18px;
+}
+.black-pay {
+  padding: 0px 20px;
+}
+.black-pay button {
+  color: white;
+  background-color: black;
+  border: none;
+  width: 100%;
+  padding: 15px 0px;
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 30px;
+}
+.explore-foot {
+  padding-top: 40px;
+}
+.bottom-buttons {
+  color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  vertical-align: middle;
+}
+.bottom-buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: 800;
+  position: relative;
+  padding: 0;
+}
+.notification {
+  display: none;
+  position: absolute;
+  background-color: red;
+  right: -8px;
+  padding: 2px 3px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  color: white;
+}
+.more-ways-container {
+  border-top: 1px solid rgba(39, 39, 39, 0.843);
+  padding-top: 40px;
+}
+.more-ways-header {
+  margin-bottom: 30px;
+}
+.more-ways-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.more-ways-card > div {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 0.7px solid rgba(52, 51, 51, 0.756);
+}
+.more-ways-texts p {
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.more-ways-container-card {
+  background-color: white;
+  padding: 20px 0px;
+  border-radius: 15px;
+}
+
+/* ////////// */
+/* CASHAPP */
+
+.cash-app-screen {
+  height: 100vh;
+  padding-top: 30px;
+}
+.transfer-screen {
+  margin-top: 13px;
+  font-size: 100px;
+  font-weight: 500;
+  text-align: center;
+  font-family: "poppins";
+  padding-bottom: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  overflow: hidden;
+}
+.transfer-amount {
+  max-width: 100%;
+}
+.transfer-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: inherit;
+}
+.transfer-buttons button {
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  padding: 20px 20px;
+  font-weight: 500;
+}
+.pay-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px 10px 20px;
+  align-items: center;
+  gap: 10px;
+}
+.pay-buttons button {
+  background-color: #04cc01;
+  border: none;
+  color: black;
+  border: none;
+  font-weight: 400;
+  font-size: 15px;
+  width: 50%;
+  border-radius: 30px;
+  padding: 13px 50px;
+  box-shadow: 0.5 0.5;
+}
+/* ===================Transaction History========================= */
+
+.history-screen {
+  background-color: white;
+  margin-top: 0px;
+  padding-bottom: 500px;
+}
+.history-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.history-search input {
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgb(235, 235, 235);
+  color: white;
+  padding: 10px;
+  border: none;
+  padding-left: 30px;
+}
+.history-search span {
+  position: absolute;
+  color: black;
+  padding-left: 10px;
+}
+.pending-transaction,
+.dated-transactions,
+.recent-transactions {
+  margin: 40px 0px;
+}
+.history-header {
+  padding-bottom: 12px;
+  font-size: 18px;
+}
+.transaction-card {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr 4fr 1fr;
+  width: 100%;
+  margin: 0px 0px 30px 0px;
+}
+.transaction-card-image {
+  height: 50px;
+  width: 50px;
+}
+.transaction-card-image img,
+.receipt-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .transaction-card-details {
+  width: 70%;
+} */
+.pending-amount {
+  font-size: 45px;
+  color: gray;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.transaction-card-name {
+  font-size: 16px;
+  color: rgb(24, 24, 24);
+  font-weight: bold;
+}
+.transaction-card-amount {
+  color: gray;
+  font-size: 18px;
+  font-weight: 500;
+}
+.transaction-card-details {
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+  margin: 0;
+}
+.transaction-card-date {
+  font-weight: 500;
+  color: gray;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+/* ====================RECEIPT============================ */
+.receipt {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+  padding: 0px 20px;
+  transition: 0.5s;
+}
+.receipt-image {
+  margin-top: 0px;
+  width: 70px;
+  height: 70px;
+}
+.Receiver-name {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 0px 0px 0px;
+}
+.close-receipt {
+  font-size: 30px;
+  padding: 20px 0px;
+}
+.transaction-details {
+  border-top: 1px solid rgb(235, 235, 235);
+  margin: 30px 0px;
+  padding: 20px 0px 40px 0px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.transaction-note {
+  display: flex;
+  align-items: top;
+  gap: 20px;
+  font-size: 13px;
+}
+.transaction-id {
+  margin-top: 20px;
+}
+.transaction-id {
+  gap: 20px;
+  display: flex;
+}
+.bx-copy {
+  font-weight: bold;
+  font-size: 20px;
+}
+.what-you-can-do {
+  padding-bottom: 30px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.what-you-can-do div {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: space-between;
+}
+.what-you-can-do p {
+  width: 85%;
+  padding-left: 15px;
+}
+.what-you-can-do span {
+  font-size: 30px;
+}
+.cs-address {
+  line-height: 1.5em;
+}
+/* ===============================SEND MONEY ============================== */
+
+.send-money {
+  position: absolute;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 100vh;
+  top: 0;
+  z-index: 100;
+  padding: 20px 20px;
+  color: black;
+}
+.send-money-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  padding-bottom: 10px;
+}
+#cancel-send {
+  font-size: 30px;
+  width: 20%;
+  color: black;
+}
+.sending-amount {
+  width: 60%;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+#sendinf-cash-balance {
+  color: black;
+}
+.send-money-button {
+  width: 20%;
+  background-color: #3ab614;
+  border: none;
+  padding: 10px 10px;
+  color: white;
+  border-radius: 20px;
+}
+.faded {
+  opacity: 0.5;
+}
+/* .send-money-inputs {
+  margin-bottom: 10px;
+} */
+.send-money-inputs div {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.send-money-inputs div > input {
+  width: 100%;
+  border: none;
+  padding: 14px 10px 10px 50px;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.send-money-inputs div > input::placeholder {
+  font-size: 15px;
+}
+.send-money-inputs div > input:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.send-money-inputs div > label {
+  position: absolute;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+.account-to-use {
+  padding: 14px 0px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+.account-to-use select {
+  border: none;
+  width: 90%;
+  background-color: transparent;
+  color: rgb(43, 43, 43);
+  font-size: 15px;
+}
+.cash-app-logo {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+}
+
+.cash-app-logo img {
+  width: 100%;
+}
+.available-accounts {
+  /* display: none; */
+  padding: 20px 0px;
+}
+.available-accounts-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.available-account-information {
+  padding: 10px;
+  line-height: 1.1em;
+  width: 80%;
+}
+.available-account-image {
+  height: 40px;
+  width: 40px;
+}
+.available-account-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.check-box input {
+  accent-color: #03b600;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+.account-name {
+  font-weight: 600;
+}
+.account-cashtag {
+  font-size: 15px;
+}
+.default-search-page {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.default-search-page p {
+  width: 70%;
+  margin: 0% auto;
+  font-size: 14px;
+  padding: 10px 0px;
+}
+.default-search-page button {
+  background-color: #03b600;
+  padding: 10px 20px;
+  border-radius: 18px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.profile {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 20px 20px 0px 20px;
+  background-color: white;
+  overflow-y: scroll;
+  color: black;
+}
+.profile div {
+}
+.profile-top {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.profile-top div {
+  font-size: 30px;
+  display: flex;
+  gap: 25px;
+}
+#close-profile {
+  padding: 0;
+  font-size: 30px;
+}
+.profile-information {
+  padding-top: 10px;
+}
+.profile-information > .profile-picture {
+  width: 60px !important;
+  height: 60px !important;
+}
+.profile-name {
+  font-weight: 600;
+  font-size: 25px;
+  padding: 20px 0px 10px 0px;
+}
+
+.select-cashtag {
+  min-width: min-content;
+  max-width: max-content;
+  background-color: rgb(222, 222, 222);
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  border-radius: 12px;
+  padding: 4px 15px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-lists {
+  padding: 30px 0px 0px 0px;
+}
+.profile-list-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  vertical-align: middle;
+}
+.list-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 50%;
+  padding: 0;
+}
+.list-name p {
+  font-weight: 500;
+  font-size: 15px;
+  color: gray;
+}
+.bxs-lock,
+.bxs-plus {
+  color: white;
+}
+.bxs-pencil,
+.bxs-camera {
+  color: gray;
+}
+.chev {
+  width: 10%;
+  font-size: 20px;
+  float: right;
+  color: rgb(189, 189, 189);
+}
+.list-name {
+  width: 70%;
+}
+.set-icon {
+  font-size: 20px;
+}
+.accountandsettings {
+  padding-top: 30px;
+  border-top: 1px solid rgb(235, 235, 235);
+}
+.accountandsettings h3 {
+  padding: 0px 0px 20px;
+}
+.setting-card {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.set-name {
+  font-size: 17px;
+  width: 90%;
+  font-weight: 600;
+}
+/* ========================================PAYROLL============================= */
+.add-to-payroll {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  color: black;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+.payroll-image {
+  margin: 80px 0px 30px 0px;
+  background-color: rgb(235, 235, 255);
+  height: 300px;
+}
+.payroll-image img {
+  width: 100%;
+}
+
+.payroll-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.payroll-top img {
+  width: 40px;
+}
+.payroll-inputs {
+  padding: 40px 0px;
+}
+.payroll-inputs input {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 10px 0px;
+  border: none;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.payroll-inputs input:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+#add-to-payroll {
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #03b600;
+  color: white;
+}
+#close-payroll {
+  font-size: 30px;
+}
+.add-to-payroll footer {
+  color: gray;
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0.5;
+}
+.payroll-image span {
+  font-family: fantasy;
+}
+/* ===================CASH PIN ============================ */
+.cash-pin {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 2000;
+  padding: 10px 20px;
+  color: black;
+}
+.cash-pin-top {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 30px;
+  font: 600;
+  margin-bottom: 13px;
+}
+
+.dot {
+  width: 23px;
+  height: 23px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+.cash-pin-inputs {
+  margin-top: 35px;
+  padding: 0px 0px;
+  width: 400px;
+  display: flex;
+}
+.cash-pin-buttons {
+  margin: 250px 0px 0px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.cash-pin-buttons button {
+  color: rgb(61, 61, 61);
+  background-color: transparent;
+  font-size: 25px;
+  margin: 0px 10px 30px 10px;
+  font-weight: 600;
+  border: none;
+}
+.focus-style {
+  border-bottom: 1px solid rgb(233, 88, 88) !important;
+  outline: red !important;
+  box-shadow: red !important;
+}
+.dot.filled {
+  border: 2px solid #0cba00;
+  background-color: #0cba00;
+}
+.dot {
+  transition: background-color ease-in-out 0.2s;
+}
+.shake {
+  animation: shake 0.5s;
+}
+/* =======================confirmed================= */
+.tick-icon {
+  display: inline-block; /* Allows for proper width/height control */
+  width: 10px; /* Width of the tick's short arm */
+  height: 20px; /* Height of the tick's long arm */
+  border-bottom: 3px solid rgb(255, 255, 255); /* Bottom border for the long arm */
+  border-right: 3px solid rgb(255, 255, 255); /* Right border for the short arm */
+  transform: rotate(45deg); /* Rotates the element to form the tick shape */
+  margin-top: -10px; /* Adjusts vertical positioning if needed */
+}
+.x-icon,
+.tick-container {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #04cc01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmed-receipt {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  z-index: 4000;
+  background-color: white;
+  padding: 60px 20px 0px 20px;
+  color: black;
+}
+.confirmed-receipt-message,
+.locked-receipt-message {
+  font-size: 25px;
+  max-width: 80%;
+  padding: 20px 5px;
+  font-weight: 600;
+  line-height: 1.1em;
+}
+.done-button {
+  color: white;
+  background-color: rgb(14, 12, 12);
+  width: 100%;
+  padding: 15px 0px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 30px;
+  margin-top: 139%;
+}
+.locked-receipt {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  z-index: 4000;
+  background-color: white;
+  padding: 60px 20px 0px 20px;
+  color: black;
+}
+.x-icon {
+  background-color: red;
+}
+.x-icon div {
+  margin: 0;
+}
+
+.x-right,
+.x-left {
+  display: block;
+  width: 35px;
+  border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+.x-right {
+  transform: rotate(45deg);
+}
+.x-left {
+  margin-bottom: -4px;
+  transform: rotate(-45deg);
+}
+.locked-receipt-message {
+  padding: 20px 0px 0px 0px;
+}
+.locked-receipt-reason {
+  width: 80%;
+  padding: 5px 3px;
+  font-size: 14px;
+  color: gray;
+}
+.lock-prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100vh;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 100;
+  justify-content: center;
+}
+.prompt-container {
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px 40px;
+}
+.prompt-container button {
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  margin: 10px;
+}
+.go-to-lock {
+  background-color: red;
+  color: white;
+}
+#close-prompt {
+  font-size: 30px;
+  color: white;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.locked-interface {
+  width: 80%;
+  padding: 50px 20px;
+  border-radius: 10px;
+  background-color: white;
+
+  align-items: center;
+  justify-content: center;
+}
+.locked-interface-inputs {
+  width: 100%;
+}
+.locked-interface-inputs input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(235, 235, 235);
+  padding: 5px 0px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.locked-interface-inputs input:focus {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  box-shadow: none;
+  outline: none;
+}
+.prompt-container div {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.unlock-account {
+  background-color: rgb(241, 241, 241);
+  color: black;
+}
+#lock-account {
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+}
+.x-container {
+  display: block;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.set-transaction {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  left: 10%;
+  z-index: 100000;
+  background-color: rgb(0, 0, 0);
+  width: 80%;
+  margin: 0% auto;
+  border: 2px solid green;
+  padding: 10px;
+}
+#close-set-transaction {
+  color: white;
+  font-size: 20px;
+}
+.set-transaction-inputs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.set-transaction-inputs input {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+#set-transaction-button {
+  background-color: green;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px 0px;
+}
+.set-transaction h3 {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.set-date-in {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}

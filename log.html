@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      background-color: rgb(212, 212, 212);
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .log-in-inputs {
+      width: 100%;
+    }
+    .log-in-inputs input {
+      width: 100%;
+      border: none;
+      padding: 20px 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      background-color: greenyellow;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      padding: 20px 60px;
+      cursor: pointer;
+    }
+    .home {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <div class="home">
+      <div class="login-container">
+        <h2>Emoji generator❤️😍</h2>
+        <div class="bitmojidatabase" style="display: none">
+          https://api.jsonbin.io/v3/b/
+        </div>
+        <div class="log-in-inputs">
+          <input type="text" placeholder="Enter your user id" class="user_id" />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            class="password"
+          />
+          <button class="log_in">Log in</button>
+          <div class="coinaddress" style="display: none">
+            $2a$10$5Z8CYzyQKJzCpIWtV7ZAx
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script/login.js"></script>
+  </body>
+</html>

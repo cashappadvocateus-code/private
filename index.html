@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash App</title>
+    <link rel="stylesheet" href="./css/reloader.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
+    <!-- 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="loader-container hide-loader">
+      <div id="loader" class="loader"></div>
+    </div>
+
+    <div class="container default-bg">
+      <div class="nav">
+        <div class="left-nav">Money</div>
+        <div class="profile-picture" id="view-profile">
+          <img src="./assets/default-profile.jpeg" id="profile-pic" alt="" />
+        </div>
+      </div>
+      <div class="profile hide-item">
+        <div class="profile-top">
+          <div class="bx bx-x" id="close-profile"></div>
+          <div>
+            <span class="bxr bx-qr-scan" id="clear-pending"></span>
+            <span class="bxr bxs-arrow-from-bottom-stroke"></span>
+          </div>
+        </div>
+        <div class="profile-information">
+          <div class="profile-picture">
+            <img src="./assets/default-profile.jpeg" id="profile-pic" alt="" />
+            <label class="add-profile-picture" for="add-profile-picture">
+              <span class="bxs bxs-camera"></span>
+            </label>
+            <input
+              type="file"
+              accept="Image/*"
+              id="add-profile-picture"
+              name="add-profile-picture"
+              hidden
+            />
+          </div>
+          <div class="profile-name">King</div>
+
+          <div class="select-cashtag">
+            <div class="user-cashtag"></div>
+            <span class="bx bx-chevron-down"></span>
+          </div>
+        </div>
+
+        <div class="profile-lists">
+          <div class="profile-list-card" id="view-locked-prompt">
+            <div class="list-icon d-green">
+              <span class="bxr bxs-lock"></span>
+            </div>
+            <div class="list-name">
+              <h4>Verify your identity</h4>
+              <p>Help prevent fraud</p>
+            </div>
+            <div class="bx bx-chevron-right chev"></div>
+          </div>
+          <div class="profile-list-card">
+            <div class="list-icon default-bg">
+              <span class="bxr bx-pencil"></span>
+            </div>
+            <div class="list-name" id="go-to-edit">
+              <h4>Edit profile</h4>
+              <p>Update your profile info</p>
+            </div>
+            <div class="bx bx-chevron-right chev"></div>
+          </div>
+          <div class="profile-list-card">
+            <div class="list-icon default-bg">
+              <span class="bxr bxs-camera"></span>
+            </div>
+            <div class="list-name">
+              <h4>Add a profile photo</h4>
+              <p>Help people find you</p>
+            </div>
+            <div class="bx bx-chevron-right chev"></div>
+          </div>
+          <div class="profile-list-card">
+            <div class="list-icon d-green">
+              <span class="bxr bxs-plus"></span>
+            </div>
+            <div class="list-name">
+              <h4>Invite friends</h4>
+              <p>Get $1000</p>
+            </div>
+            <div class="bx bx-chevron-right chev"></div>
+          </div>
+        </div>
+        <div class="accountandsettings">
+          <h3>Account & settings</h3>
+          <div class="setting-card">
+            <span class="set-icon bxr bx-user"></span>
+            <span class="set-name" id="open-set-transaction"> Personal</span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bxr bxs-bank"></span>
+            <span class="set-name">Linked banks</span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bxr bx-alert-shield"></span>
+            <span class="set-name"> Security </span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bxr bx-eye"></span>
+            <span class="set-name"> Privacy </span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bxr bx-star"> </span>
+            <span class="set-name">Favorites</span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bxr bxs-parent-child"></span>
+            <span class="set-name">family</span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bx bx-shopping-bag"></span>
+            <span class="set-name">Shopping</span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bx bx-triangle"></span>
+            <span class="set-name">Limits</span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+          <div class="setting-card">
+            <span class="set-icon bxr bx-tv-alt"></span>
+            <span class="set-name">Your devices</span
+            ><span class="bx bx-chevron-right chev"></span>
+          </div>
+        </div>
+        <div class="sign-out"></div>
+      </div>
+      <div class="homescreen" id="screen">
+        <div class="cash-balance">
+          <div class="balance-container">
+            <div class="balance-header">
+              <div>Cash balance</div>
+              <span class="bxr bx-chevron-right"></span>
+            </div>
+            <div class="balance"><span>$</span><span id="balance">0</span></div>
+            <div class="routing">
+              <p>Account....</p>
+              <p>Routing...</p>
+            </div>
+            <div class="balance-buttons">
+              <button>Add money</button>
+              <button>Withdraw</button>
+            </div>
+          </div>
+        </div>
+        <div class="paycheck">
+          <div>
+            <div class="paycheck-icon d-green">
+              <span class="bxr bx-window-arrow-out"></span>
+            </div>
+            <div class="paycheck-texts">
+              <p>Paychecks</p>
+              <span>Get benefits with direct deposits</span>
+            </div>
+          </div>
+          <span class="bxr bx-chevron-right"></span>
+        </div>
+        <div class="explore">
+          <div class="explore-header">Explore</div>
+          <div class="explore-container">
+            <div class="explore-card">
+              <div class="explore-card-header">
+                <p>Savings</p>
+                <span class="bxr bx-chevron-right"></span>
+              </div>
+              <div class="explore-icon d-green">
+                <span class="bxr bx-dollar"></span>
+              </div>
+              <div class="explore-foot">Up to 4% interest</div>
+            </div>
+            <div class="explore-card">
+              <div class="explore-card-header">
+                <p>Bitcoin</p>
+                <span class="bxr bx-chevron-right"></span>
+              </div>
+              <div class="explore-icon d-blue">
+                <span class="bx bx-bitcoin"></span>
+              </div>
+              <div class="explore-foot">Learn and invest</div>
+            </div>
+            <div class="explore-card">
+              <div class="explore-card-header">
+                <p>Stocks</p>
+                <span class="bxr bx-chevron-right"></span>
+              </div>
+              <div class="explore-icon d-stock">
+                <span class="bxr bxs-chart-spline"></span>
+              </div>
+              <div class="explore-foot">Invest with $1</div>
+            </div>
+            <div class="explore-card">
+              <div class="explore-card-header">
+                <p>Taxes</p>
+                <span class="bxr bx-chevron-right"></span>
+              </div>
+              <div class="explore-icon d-tax">
+                <span class="bxr bx-bank"></span>
+              </div>
+              <div class="explore-foot">Pay $0 to file</div>
+            </div>
+            <div class="explore-card">
+              <div class="explore-card-header">
+                <p>Family</p>
+                <span class="bxr bx-chevron-right"></span>
+              </div>
+              <div class="explore-icon d-green">
+                <span class="bxr bxs-parent-child"></span>
+              </div>
+              <div class="explore-foot">Cash App for teens</div>
+            </div>
+          </div>
+        </div>
+        <div class="more-ways-container">
+          <div class="more-ways-header">More ways to add money</div>
+          <div class="more-ways-container-card">
+            <div class="more-ways-card">
+              <div>
+                <div class="more-ways-icon">
+                  <span class="bxr bx-currency-note"></span>
+                </div>
+                <div class="more-ways-texts">
+                  <p>Deposit paper money</p>
+                  <span>Find a nearby retailer</span>
+                </div>
+              </div>
+              <span class="bx-chevron-right"></span>
+            </div>
+            <div class="more-ways-card">
+              <div>
+                <div class="more-ways-icon">
+                  <span class="bxr bx-currency-note"></span>
+                </div>
+                <div class="more-ways-texts">
+                  <p>Deposit check</p>
+                  <span>Scan with your phone</span>
+                </div>
+              </div>
+              <span class="bx-chevron-right"></span>
+            </div>
+            <div class="more-ways-card">
+              <div>
+                <div class="more-ways-icon">
+                  <span class="bxr bx-refresh-cw"></span>
+                </div>
+                <div class="more-ways-texts">
+                  <p>Auto reload</p>
+                  <span>Add money automatically</span>
+                </div>
+              </div>
+              <span class="bx-chevron-right"></span>
+            </div>
+            <div class="more-ways-card">
+              <div>
+                <div class="more-ways-icon">
+                  <span class="bxr bx-window-arrow-out"></span>
+                </div>
+                <div class="more-ways-texts">
+                  <p>Deposit paper money</p>
+                  <span>Find a nearby retailer</span>
+                </div>
+              </div>
+              <span class="bx-chevron-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lock-prompt hide-item">
+        <div class="bx bx-x" id="close-prompt"></div>
+        <div class="prompt-container">
+          <div>Click a button below</div>
+          <button class="unlock-account">unlock</button>
+          <button class="go-to-lock">Lock</button>
+        </div>
+        <div class="locked-interface hide-item">
+          <div class="locked-interface-inputs">
+            <h1>Lock your account</h1>
+            <input
+              type="text"
+              id="locked-receipt-message"
+              placeholder="Header"
+            />
+            <input
+              type="text"
+              id="locked-receipt-reason"
+              placeholder="Tell us why?"
+            />
+            <input type="number" id="l-pin" placeholder="Enter your Cash Pin" />
+            <button
+              class="bx bx-arrow-left-circle"
+              id="go-to-prompt-container"
+            ></button>
+            <button id="lock-account">Lock account</button>
+          </div>
+        </div>
+      </div>
+      <div class="cash-app-screen hide-item" id="screen">
+        <div class="transfer-screen">
+          <span>$</span><span id="transfer-amount">0</span>
+        </div>
+
+        <div class="transfer-buttons">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button style="font-weight: 700">.</button>
+          <button>0</button>
+          <button class="bx-chevron-left" id="cancel-btn"></button>
+        </div>
+        <div class="pay-buttons">
+          <button>Pool</button>
+          <button>Request</button>
+        </div>
+        <div class="black-pay">
+          <button id="pay-button">Pay</button>
+        </div>
+      </div>
+      <div class="history-screen hide-item" id="screen">
+        <div class="history-search">
+          <span class="bx-search"></span
+          ><input
+            type="search"
+            name=""
+            id=""
+            placeholder="Search transactions"
+          />
+        </div>
+        <div class="pending-transaction hide-item">
+          <h3 class="history-header">On hold</h3>
+          <div class="transaction-card" id="pending-transaction-card"></div>
+        </div>
+        <div class="recent-transactions hide-item">
+          <h3 class="history-header">Completed</h3>
+          <div class="transaction-card">
+            <div class="transaction-card-image">
+              <img
+                src="./assets/WhatsApp Image 2025-06-29 at 11.31.04_7f1fd58d.jpg"
+                alt=""
+              />
+            </div>
+            <div class="transaction-card-details">
+              <div class="transaction-card-name">Alyisa</div>
+              <div class="transaction-card-details">$7000 for ❤️❤️</div>
+              <div class="transaction-card-date">today</div>
+            </div>
+            <div class="transaction-card-amount">$7,000</div>
+          </div>
+        </div>
+        <div class="dated-transacions"></div>
+      </div>
+      <div class="receipt hide-item">
+        <div class="bx bx-x close-receipt"></div>
+        <div class="receipt-image">
+          <img
+            src="./assets/WhatsApp Image 2025-06-29 at 11.31.04_7f1fd58d.jpg"
+            alt=""
+          />
+        </div>
+        <div class="Receiver-name"></div>
+        <div class="transacion-date"></div>
+        <div class="transacion-description"></div>
+        <div class="pending-amount"></div>
+        <div class="transaction-details">
+          <h3 class="history-header"></h3>
+          <div class="transaction-note">
+            <div class="side-icons">⚠️</div>
+            <div class="transaction-notice">
+              <h4>Notice</h4>
+              This transaction has been withheld, the recipient pay an
+              accaptance fee of <strong>$200.00</strong>
+            </div>
+          </div>
+
+          <div class="transaction-id">
+            <div class="side-icons">
+              <span class="bx-copy"></span>
+            </div>
+            <div>
+              <h4>Transaction address</h4>
+              <p class="address">#hnWI_heD213</p>
+            </div>
+          </div>
+        </div>
+        <div class="what-you-can-do">
+          <h3 class="history-header">What you can do</h3>
+          <div>
+            <div class="side-icons">
+              <span class="bxr bx-message-dots"></span>
+            </div>
+            <p>Contact advocate</p>
+            <span class="bx bx-chevron-right"></span>
+          </div>
+        </div>
+        <div class="cs-address">
+          <strong>Block, Inc.</strong>
+          <p>1955 Broadway , Suite 600</p>
+          <p>Oakland, CA 95612</p>
+          cash.advocate.us
+        </div>
+      </div>
+      <div class="send-money hide-item">
+        <div class="send-money-top">
+          <div class="bx bx-x" id="cancel-send"></div>
+          <div class="sending-amount">
+            <span>$</span><span id="sending-amount"></span>
+          </div>
+          <button class="send-money-button faded">Pay</button>
+        </div>
+        <div class="send-money-inputs">
+          <div>
+            <label for="cash-tag">To</label>
+            <input
+              type="search"
+              id="cash-tag"
+              placeholder="Name, $Cashtag, Phone, Email"
+            />
+          </div>
+
+          <div>
+            <label for="note">For</label>
+            <input type="text" id="note" placeholder="Add a note" />
+          </div>
+        </div>
+        <div class="account-to-use">
+          <span>Use</span>
+          <span class="cash-app-logo"
+            ><img src="./assets/Square_Cash_app_logo.svg.webp"
+          /></span>
+
+          <select name="use-account">
+            <option value="Cash-balance" class="sending-cash-balance">
+              Cash balance:&nbsp; $<span id="balance"></span>
+            </option>
+            <option value="bank-balance" disabled>Jp Morgan Chase</option>
+          </select>
+        </div>
+        <div class="available-accounts hide-item">
+          <div class="available-accounts-card">
+            <div class="available-account-image">
+              <img
+                src="./assets/WhatsApp Image 2025-06-29 at 11.31.04_7f1fd58d.jpg"
+                alt=""
+              />
+            </div>
+            <div class="available-account-information">
+              <div class="account-name">Quarant Bitch</div>
+              <div class="account-cashtag">$pooky</div>
+            </div>
+            <div class="check-box">
+              <input type="checkbox" />
+            </div>
+          </div>
+        </div>
+
+        <div class="default-search-page">
+          <div>
+            <h4>Find added receipients</h4>
+            <p>
+              Add reciceipients to your payroll to send money and unclock user's
+              fixed deposit
+            </p>
+          </div>
+          <button class="to-payroll" id="to-payroll">Add to Payroll</button>
+        </div>
+      </div>
+      <div class="add-to-payroll hide-item">
+        <div class="payroll-top">
+          <span class="bx bx-x" id="close-payroll"></span>
+          <img src="./assets/Square_Cash_app_logo.svg.webp" />
+        </div>
+        <h2>Add to payroll</h2>
+        <div>
+          <label for="recieve-image" class="payroll-image">
+            <div class="payroll-image">
+              <img
+                src="./assets/default-dp.png"
+                alt=""
+                id="payroll-image"
+              /></div
+          ></label>
+          <input type="file" id="recieve-image" accept="Image/*" hidden />
+        </div>
+        <div class="payroll-inputs">
+          <input
+            type="text"
+            class="recipient-name"
+            placeholder="Enter recipient name"
+          />
+          <input
+            type="text"
+            class="recipient-tag"
+            placeholder="Enter cashtag"
+          />
+          <input
+            type="text"
+            class="recipient-email"
+            placeholder="Enter email"
+          />
+        </div>
+        <button id="add-to-payroll">Add recipient</button>
+        <footer>&copy;Cash App 2025</footer>
+      </div>
+      <div class="cash-pin hide-item">
+        <div class="cash-pin-top">
+          <div>
+            <span>?</span>
+            <span class="bx bx-x" id="hide-cashpin"></span>
+          </div>
+        </div>
+        <div class="pin-message"><h1>Enter your Cash Pin</h1></div>
+        <div class="cash-pin-inputs">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="cash-pin-buttons">
+          <button class="pin-buttons">1</button>
+          <button class="pin-buttons">2</button>
+          <button class="pin-buttons">3</button>
+          <button class="pin-buttons">4</button>
+          <button class="pin-buttons">5</button>
+          <button class="pin-buttons">6</button>
+          <button class="pin-buttons">7</button>
+          <button class="pin-buttons">8</button>
+          <button class="pin-buttons">9</button>
+          <button class="pin-buttons"></button>
+          <button class="pin-buttons">0</button>
+          <button class="bx bx-chevron-left" id="delete-pin"></button>
+        </div>
+      </div>
+      <div class="locked-receipt hide-item">
+        <div class="locked-receipt-top">
+          <div class="x-container">
+            <div class="x-icon">
+              <div>
+                <span class="x-left"></span><span class="x-right"></span>
+              </div>
+            </div>
+            <div class="locked-receipt-message">
+              Your account has been restricted
+            </div>
+          </div>
+        </div>
+        <div class="locked-receipt-reason">
+          Waiting for Miranda to pay acceptance fee
+        </div>
+        <button class="done-button">Done</button>
+      </div>
+      <div class="confirmed-receipt hide-item">
+        <div class="confirmed-receipt-top">
+          <div class="tick-container">
+            <div class="tick-icon"></div>
+          </div>
+        </div>
+        <div class="confirmed-receipt-message"></div>
+        <button class="done-button">Done</button>
+      </div>
+      <div class="set-transaction hide-item">
+        <div class="bx bx-x" id="close-set-transaction"></div>
+        <h3>Edit date on transaction</h3>
+        <div class="set-transaction-inputs">
+          <input
+            type="text"
+            id="set-description"
+            placeholder="Enter what you want to be displayed as reason"
+          />
+          <div class="set-date-in">
+            <input type="text" id="set-date" placeholder="Date" />
+          </div>
+          <div class="set-date-in">
+            <input type="text" id="set-time" placeholder="Time" />
+          </div>
+          <button id="set-transaction-button">Submit</button>
+        </div>
+      </div>
+      <div class="bottom-nav bg-white">
+        <div class="bottom-buttons">
+          <button
+            class="bxr bx-home home-balance"
+            id="home-button"
+            style="color: black"
+          ></button>
+          <button
+            class="bxr bx-card-view-no-title"
+            id="to-payroll"
+            style="color: rgb(207, 207, 207)"
+          ></button>
+          <button
+            class="bxr bx-dollar"
+            id="dollar-button"
+            style="color: rgb(207, 207, 207)"
+          ></button>
+          <button
+            class="bxr bx-search"
+            id="search-btn"
+            style="color: rgb(207, 207, 207)"
+          ></button>
+          <button
+            class="bxr bx-clock-3"
+            id="history-button"
+            style="color: rgb(207, 207, 207)"
+          >
+            <span class="notification">12</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <
+    <script src="./script/home.js" type="module"></script>
+  </body>
+</html>

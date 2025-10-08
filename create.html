@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THADR</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .security {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgb(235, 235, 235);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    .creation-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: rgb(235, 235, 235);
+      height: 100vh;
+    }
+    h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .security button {
+      background-color: rgb(136, 227, 0);
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+    .security input,
+    .creation-page input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+    .security input:focus,
+    .creation-page input:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+    .creation-page > div {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+    }
+    .creation-page > div input {
+      width: 100%;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+    .create-profile {
+      background-color: rgb(136, 227, 0);
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 10px 40px;
+      border-radius: 10px;
+      margin-left: 5px;
+    }
+  </style>
+  <body>
+    <div class="security hide-item">
+      <div>
+        <h4>ENTER PIN</h4>
+        <input type="password" accept="1234" id="pass" />
+        <button id="access">Access</button>
+      </div>
+    </div>
+
+    <script>
+      const isdevice = localStorage.getItem("deviceregistered?");
+      if (!isdevice) {
+        document.location = "log.html";
+      }
+      document.querySelector("#pass").addEventListener("keydown", (key) => {
+        if ((key.key = "Enter")) {
+          grantacess();
+        }
+      });
+      document.querySelector("#access").addEventListener("click", () => {
+        grantacess();
+      });
+      function grantacess() {
+        const pass = document.querySelector("#pass").value;
+
+        if (pass === "5815" || pass === "codenamethadreei") {
+          document.location = "project5815.html";
+          localStorage.setItem("access-passed", true);
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>
